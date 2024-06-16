@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lomakkeen validointi</title>
+</head>
+
+<body>
+    <h1><strong>Rekisteröitymislomake</strong></h1>
+    <h3><strong>Siirry kentästä toiseen tab-näppäimellä</strong></h3>
+    <form id="rekisterointi">
+        <div>
+            <p>Käyttäjä ID:</p>
+            <input type="text" id="kayttajaID">
+            <span id="kayttajaID-error" class="error-message"></span>
+        </div>
+        <div>
+            <p>Salasana:</p>
+            <input type="password" id="salasana">
+            <span id="salasana-error" class="error-message"></span>
+        </div>
+        <div>
+            <p>Nimi:</p>
+            <input type="text" id="nimi">
+            <span id="nimi-error" class="error-message"></span>
+        </div>
+        <div>
+            <p>Osoite:</p>
+            <input type="text" id="osoite">
+            <span id="osoite-error" class="error-message"></span>
+        </div>
+        <div>
+            <p>Maa:</p>
+            <select id="maa">
+                <option value="alku">(Valitse maa)</option>
+                <option value="fi">Suomi</option>
+                <option value="se">Ruotsi</option>
+                <option value="no">Norja</option>
+                <option value="dk">Tanska</option>
+                <option value="muu">Muu</option>
+            </select>
+            <span id="maa-error" class="error-message"></span>
+        </div>
+        <div>
+            <p>Postinumero:</p>
+            <input type="text" id="postinumero">
+            <span id="postinumero-error" class="error-message"></span>
+        </div>
+        <div>
+            <p>Sähköposti:</p>
+            <input type="text" id="sahkoposti">
+            <span id="sahkoposti-error" class="error-message"></span>
+        </div>
+        <div>
+            <p>Sukupuoli:</p>
+            <input type="radio" name="sukupuoli" value="mies">Mies
+            <input type="radio" name="sukupuoli" value="nainen">Nainen
+            <input type="radio" name="sukupuoli" value="muu">Muu
+            <input type="radio" name="sukupuoli" value="ehk">En halua kertoa
+            <span id="sukupuoli-error" class="error-message"></span>
+        </div>
+        <div>
+            <p>Kieli:</p>
+            <input type="checkbox" name="kieli" value="suomi">Suomi
+            <input type="checkbox" name="kieli" value="muu">Muu kuin Suomi
+            <span id="kieli-error" class="error-message"></span>
+        </div>
+        <div class="textarea-container">
+            <label for="lisatietoja" class="textarea-label">Lisätietoja:</label>
+            <textarea id="lisatietoja" class="textarea"></textarea>
+        </div>
+        <br>
+        <br>
+        <div id="laheta">
+            <input type="submit" value="Lähetä">
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
